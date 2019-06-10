@@ -2,6 +2,7 @@ package com.four.exam;
 
 import com.four.exam.entity.Stutestscore2;
 import com.four.exam.repository.TestpaperRepository;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import org.apache.poi.xwpf.usermodel.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,7 +31,7 @@ public class WordTest {
     private TestpaperRepository testpaperRepository;
     @Test
     public void testSimpleWrite() throws Exception {
-        List<Map<String,Object>> list = testpaperRepository.findTestpaersContent(1);
+        List<Map<String, Object>> list = testpaperRepository.findTestpaersContent(1);
         System.out.println(list);
         //新建一个文档
         XWPFDocument doc = new XWPFDocument();
